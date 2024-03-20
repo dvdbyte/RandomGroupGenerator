@@ -1,0 +1,103 @@
+/* Reset CSS */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 1em;
+}
+
+/* Toggle Styles */
+.toggle-wrap a {
+  display: inline-block;
+  background: #444;
+  border-radius: 1000px;
+  position: relative;
+  width: 3em;
+  height: 1.25em;
+  vertical-align: middle;
+  margin: 0 0.5em;
+}
+
+.toggle-wrap a strong {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  top: 0.1em;
+  left: 0.15em;
+  height: 1em;
+  width: 1.5em;
+  background: #fff;
+  border-radius: 1000px;
+  transition: 0.3s;
+}
+
+/* Alternate Layout */
+.wrap.alt .switch {
+  left: calc(100% - 1.6em);
+}
+
+/* Number of Groups Wrap */
+.numgroups-wrap {
+  display: none;
+}
+
+.wrap.alt .numgroups-wrap {
+  display: block;
+}
+
+/* Per Group Wrap */
+.alt .pergroup-wrap {
+  display: none;
+}
+
+/* Input, Textarea, Button Styles */
+input,
+textarea,
+button {
+  font-size: 1em;
+  padding: 0.25em;
+}
+
+/* Groups Container */
+.groups {
+  padding: 1em;
+  background: #ddd;
+  margin: 1em 0;
+}
+
+/* Group Styles */
+.group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  padding: 1em;
+  margin: 0.25em;
+  width: 100%; /* Adjust width for smaller screens */
+  border-radius: 3px;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.group h2 {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (min-width: 768px) {
+  .group {
+    width: calc(50% - 1em); /* Adjust width for medium screens */
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .group {
+    width: calc(33.33% - 1em); /* Adjust width for large screens */
+  }
+}
